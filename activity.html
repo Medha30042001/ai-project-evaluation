@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Activity Logging — TimeFlow</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="bg-gradient-to-br from-indigo-50 via-white to-purple-50 min-h-screen">
+
+  <div class="container mx-auto px-4 py-6 max-w-5xl">
+    <nav class="flex justify-between items-center mb-8">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+          <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none"><path d="M12 6v6l4 2" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h1 class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">TimeFlow</h1>
+      </div>
+      <div class="flex items-center gap-4">
+        <div id="userEmail" class="text-sm text-gray-600"></div>
+        <button id="logoutBtn" class="px-3 py-2 rounded-lg hover:bg-white/50">Logout</button>
+      </div>
+    </nav>
+
+    <div id="mainCard" class="bg-white/70 backdrop-blur-lg rounded-2xl p-8 shadow-xl border border-white/20 mb-6">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+        <div class="flex items-center gap-3">
+          <svg class="w-5 h-5 text-indigo-600" viewBox="0 0 24 24" fill="none"><path d="M3 12h18" stroke="#4F46E5" stroke-width="1.5"/></svg>
+          <input id="dateInput" type="date" class="px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+        </div>
+
+        <div class="flex flex-wrap gap-4">
+          <div class="px-6 py-3 bg-gradient-to-r from-indigo-100 to-purple-100 rounded-xl">
+            <div class="text-sm text-gray-600 mb-1">Total Logged</div>
+            <div id="totalLogged" class="text-2xl font-bold text-indigo-600">0 min</div>
+          </div>
+          <div class="px-6 py-3 bg-gradient-to-r from-purple-100 to-pink-100 rounded-xl">
+            <div class="text-sm text-gray-600 mb-1">Remaining</div>
+            <div id="remaining" class="text-2xl font-bold text-purple-600">1440 min</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+          <div id="progressBar" class="h-full bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-500 rounded-full" style="width:0%"></div>
+        </div>
+        <div class="text-sm text-gray-600 mt-2 text-center" id="percentText">0% of day tracked</div>
+      </div>
+
+      <div id="addSection" class="mb-4">
+        <button id="showAddBtn" class="w-full md:w-auto px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl font-medium hover:shadow-xl inline-flex items-center gap-2">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Add Activity
+        </button>
+
+        <form id="activityForm" class="hidden bg-white rounded-xl p-6 shadow-lg border border-gray-100 mt-4">
+          <div class="mb-4">
+            <label class="block text-sm font-medium text-gray-700 mb-2">Activity Title</label>
+            <input id="title" type="text" class="w-full px-4 py-2 border border-gray-200 rounded-lg" placeholder="e.g., Team Meeting" />
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-sm font-medium text-gray-700 mb-2">Category</label>
+            <select id="category" class="w-full px-4 py-2 border border-gray-200 rounded-lg">
+              <option value="">Select category</option>
+              <option>Work</option>
+              <option>Sleep</option>
+              <option>Exercise</option>
+              <option>Meals</option>
+              <option>Commute</option>
+              <option>Learning</option>
+              <option>Entertainment</option>
+              <option>Personal</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-sm font-medium text-gray-700 mb-2">Duration (minutes)</label>
+            <input id="duration" type="number" min="1" class="w-full px-4 py-2 border border-gray-200 rounded-lg" placeholder="e.g., 60" />
+          </div>
+
+          <div class="flex gap-3">
+            <button id="saveBtn" type="button" class="flex-1 px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg">Add</button>
+            <button id="cancelBtn" type="button" class="px-4 py-2 border border-gray-200 rounded-lg">Cancel</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="activitiesList" class="mb-6"></div>
+
+      <button id="analyzeBtn" disabled class="w-full px-6 py-4 rounded-xl font-semibold text-lg transition-all duration-200 inline-flex items-center justify-center gap-2 bg-gray-200 text-gray-400 cursor-not-allowed">
+        Analyze Day
+      </button>
+      <p id="unlockNote" class="text-sm text-center text-gray-600 mt-2">Complete all 1440 minutes to unlock analytics</p>
+
+    </div>
+  </div>
+
+    <!-- Firebase Config + Initialization -->
+  <script src="scripts/firebase-config.js"></script>
+  <script src="scripts/firebase-init.js"></script>
+
+  <!-- Auth, Firestore, Activity Logic -->
+  <script src="scripts/auth.js"></script>
+  <script src="scripts/db.js"></script>
+  <script src="scripts/activity.js"></script>
+
+  <script>
+    // 🔐 Protect Page — Redirect if not logged in
+    onAuthStateChanged(user => {
+      if (!user) {
+        window.location.href = "login.html";
+        return;
+      }
+
+      // Show email on navbar
+      document.getElementById("userEmail").textContent = user.email;
+    });
+
+    // 🔓 Logout button
+    document.getElementById("logoutBtn").addEventListener("click", async () => {
+      await logoutUser();
+      window.location.href = "login.html";
+    });
+  </script>
+
+</body>
+</html>

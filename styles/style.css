@@ -1,0 +1,15 @@
+/* small additions on top of Tailwind */
+.glass-card {
+  @apply bg-white/70 backdrop-blur-lg rounded-2xl p-8 shadow-xl border border-white/20;
+}
+
+.bullet {
+  width:28px;height:28px;border-radius:6px;background:linear-gradient(90deg,#6366f1,#8b5cf6);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;
+}
+.icon-circle { width:56px; height:56px; border-radius:12px; display:flex; align-items:center; justify-content:center; margin-bottom:12px; }
+.icon-circle svg { width:28px; height:28px; }
+.icon-circle.from-blue-500 { background: linear-gradient(135deg,#3b82f6,#06b6d4); }
+.icon-circle.from-purple-500 { background: linear-gradient(135deg,#8b5cf6,#ec4899); }
+.icon-circle.from-indigo-500 { background: linear-gradient(135deg,#6366f1,#8b5cf6); }
+
+.stat-card { background: rgba(255,255,255,0.7); backdrop-filter: blur(6px); border-radius:12px; padding:18px; box-shadow:0 4px 14px rgba(15,23,42,0.06); border:1px solid rgba(255,255,255,0.2); }

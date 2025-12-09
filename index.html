@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TimeFlow — Master Your Time</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="antialiased bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+
+  <header class="container mx-auto px-4 py-6">
+    <nav class="flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+          <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none">
+            <path d="M12 6v6l4 2" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="12" r="9" stroke="white" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <h1 class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">TimeFlow</h1>
+      </div>
+
+      <div>
+        <a class="px-5 py-2.5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg font-medium hover:shadow-xl transition-all" href="login.html">Sign In</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container mx-auto px-4 pb-24">
+    <section class="max-w-6xl mx-auto text-center mb-16">
+      <h2 class="text-5xl md:text-6xl font-bold mb-6 leading-tight bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+        Master Your Time,<br/>Amplify Your Productivity
+      </h2>
+      <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">Track every minute of your day with precision. Analyze patterns, optimize your schedule, and achieve perfect work-life balance.</p>
+
+      <div class="flex justify-center gap-4">
+        <a href="login.html" class="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl font-semibold text-lg hover:shadow-2xl transition-all inline-flex items-center gap-3">
+          <span>Get Started Free</span>
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M12 6v6l4 2" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="grid md:grid-cols-3 gap-8 mb-16">
+      <article class="glass-card">
+        <div class="icon-circle from-blue-500 to-cyan-500">
+          <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none"><path d="M12 6v6l4 2" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="white" stroke-width="1.5"/></svg>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Precise Time Tracking</h3>
+        <p class="text-gray-600">Log activities down to the minute. Track exactly 1440 minutes per day with intelligent validation.</p>
+      </article>
+
+      <article class="glass-card">
+        <div class="icon-circle from-purple-500 to-pink-500">
+          <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none"><path d="M3 12h18" stroke="white" stroke-width="1.5" stroke-linecap="round"/><path d="M3 6h18" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Visual Analytics</h3>
+        <p class="text-gray-600">Beautiful charts and insights. Understand where your time goes with pie charts, bar graphs, and timelines.</p>
+      </article>
+
+      <article class="glass-card">
+        <div class="icon-circle from-indigo-500 to-purple-500">
+          <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Pattern Recognition</h3>
+        <p class="text-gray-600">Discover productivity patterns. See category breakdowns and optimize your daily routine.</p>
+      </article>
+    </section>
+
+    <section class="glass-card p-12">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h3 class="text-3xl font-bold mb-6 text-gray-800">How It Works</h3>
+          <ul class="space-y-4 text-left">
+            <li class="flex gap-3">
+              <div class="bullet">✓</div>
+              <div><strong>Select Your Date</strong><div class="text-gray-600">Choose any day to track using our intuitive date picker</div></div>
+            </li>
+            <li class="flex gap-3">
+              <div class="bullet">✓</div>
+              <div><strong>Log Activities</strong><div class="text-gray-600">Add activities with title, category, and duration</div></div>
+            </li>
+            <li class="flex gap-3">
+              <div class="bullet">✓</div>
+              <div><strong>Analyze & Optimize</strong><div class="text-gray-600">View detailed analytics when your day is complete</div></div>
+            </li>
+          </ul>
+        </div>
+        <div class="rounded-xl p-8 bg-gradient-to-br from-indigo-100 to-purple-100 h-64 flex items-center justify-center">
+          <div class="text-center">
+            <div class="text-6xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-2">1440</div>
+            <div class="text-lg text-gray-700 font-medium">Minutes Per Day</div>
+            <div class="text-sm text-gray-600 mt-2">Track every single one</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="py-12 text-center text-sm text-gray-500">
+    Built with ❤️ — AI-assisted (Mocha + ChatGPT). See README for details.
+  </footer>
+
+  <!-- Firebase Config + Initialization -->
+  <script src="scripts/firebase-config.js"></script>
+  <script src="scripts/firebase-init.js"></script>
+
+  <!-- App Scripts (Only load what this page needs) -->
+  <script src="scripts/auth.js"></script>
+
+</body>
+</html>
