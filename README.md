@@ -42,7 +42,7 @@ https://timetrackingapp-a6604.web.app/
 ## Features
 
 ### => Google Authentication  
-Secure sign-in using Google OAuth.
+- Secure sign-in using Google OAuth.
 
 ### => Add, Edit, Delete Activities  
 Log activities with:
@@ -63,7 +63,7 @@ Firestore path:
 - Updates instantly without reload  
 
 ### => Clean & Responsive UI  
-Optimized for mobile, tablet, and desktop.
+- Optimized for mobile, tablet, and desktop.
 
 ---
 
@@ -87,15 +87,15 @@ window.__FIREBASE_CONFIG = {
         };
 ```
 ### 3. Open the Project
-  Since this is pure HTML/CSS/JS:
-  Use Live Server
-  OR
-  Open index.html directly in your browser
+- Since this is pure HTML/CSS/JS:
+- Use Live Server
+- OR
+- Open index.html directly in your browser
 
  ### 4. (Optional) Firebase Hosting Setup
-  firebase login
-  firebase init
-  firebase deploy   
+- firebase login
+- firebase init
+- firebase deploy   
 
 ---
 
@@ -132,5 +132,5 @@ ai-project-evaluation
 ---
 
 ## Future Improvements 
-  Add dark mode
-  Add weekly/monthly analysis
+- Add dark mode
+- Add weekly/monthly analysis
