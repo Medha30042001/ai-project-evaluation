@@ -1,4 +1,4 @@
-##################################################################################################
+#############################################################################
 
 # TimeFlow — AI-assisted Time Tracking & Analytics
 
@@ -6,7 +6,7 @@ TimeFlow is a lightweight, user-friendly time-tracking platform designed to help
 
 Built with HTML, CSS, JS (DOM) and powered by Firebase Auth + Firestore, this project demonstrates clean architecture, modular code, and real-time database integration.
 
-##################################################################################################
+#############################################################################
 
 # Live demo: 
 
@@ -16,7 +16,7 @@ Built with HTML, CSS, JS (DOM) and powered by Firebase Auth + Firestore, this pr
   -> Firebase hosting link  
       https://timetrackingapp-a6604.web.app/
 
-##################################################################################################
+#############################################################################
 
 # Tech Stack
 
@@ -39,7 +39,7 @@ Built with HTML, CSS, JS (DOM) and powered by Firebase Auth + Firestore, this pr
     * GitHub Pages (Primary)
     * Firebase Hosting (Alternate)
 
-##################################################################################################
+#############################################################################
 
 # Features
 
@@ -67,7 +67,7 @@ Built with HTML, CSS, JS (DOM) and powered by Firebase Auth + Firestore, this pr
   ✔ Clean & Responsive UI
     -> Designed to work across mobile, tablet, and desktop.
 
-##################################################################################################
+#############################################################################
 
 # How to Run the Project Locally
 
@@ -96,41 +96,13 @@ Built with HTML, CSS, JS (DOM) and powered by Firebase Auth + Firestore, this pr
   4. (Optional) Firebase Hosting Setup
         firebase login
         firebase init
-        firebase deploy
+        firebase deploy    
 
-##################################################################################################
-
-# Folder structure
-
-  ai-project-evaluation
-  │
-  ├── index.html
-  ├── login.html
-  ├── activity.html
-  ├── analytics.html
-  │
-  ├── scripts
-  │   ├── auth.js
-  │   ├── db.js
-  │   ├── analytics.js
-  │   ├── activity.js
-  │   ├── firebase-config.js
-  │   └── firebase-init.js
-  │
-  ├── styles
-  │   └── style.css
-  │
-  ├── dist/
-  ├── .github/
-  ├── firebase.json
-  └── README.md
-    
-
-##################################################################################################
+#############################################################################
 
 # Screenshots / GIFs of the app (recommended)
 
-##################################################################################################
+#############################################################################
 
 # Future Improvements 
   Add dark mode
