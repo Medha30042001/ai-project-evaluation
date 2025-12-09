@@ -16,6 +16,12 @@ https://timetrackingapp-a6604.web.app/
 
 ---
 
+## Video Walkthrough Link
+
+https://drive.google.com/file/d/16lPNCcYLbhbV_uLHnEBjc-RnBj1Q31YL/view?usp=sharing
+
+---
+
 ## Tech Stack
 
 ### **Frontend**
@@ -127,7 +133,16 @@ ai-project-evaluation
 ```
 ---
 
-## Screenshots / GIFs of the app (recommended)
+## Screenshots 
+
+https://drive.google.com/file/d/1zl1deaGjGyfBx3AIcuz_SFZgqgmHUila/view?usp=sharing
+https://drive.google.com/file/d/1r-140M8kB9oze2ktRpXnU6bADHaCeZpJ/view?usp=sharing
+https://drive.google.com/file/d/1w8UQlStM2go5jXbtoDaHqsOOMhxFTs1f/view?usp=sharing
+https://drive.google.com/file/d/1ltSbuvPIh-6QEcOjCzMLIaJhKgDlv_AA/view?usp=sharing
+https://drive.google.com/file/d/1yKC4PCDgwqwetHtYrkhp1l1Q0--s8_Xt/view?usp=sharing
+https://drive.google.com/file/d/1-WAZBPceMAqRFAtTFDIkWRDdRcMrDQH8/view?usp=sharing
+https://drive.google.com/file/d/1dukRB08JqIf421AFWMkzuv683wGXBf0Y/view?usp=sharing
+https://drive.google.com/file/d/1rUHAqYJIVUVNwmgjcK3aDqL_dqCQ2N7v/view?usp=sharing
 
 ---
 
