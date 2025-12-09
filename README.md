@@ -6,7 +6,7 @@ Built with **HTML, CSS, JavaScript**, and powered by **Firebase Auth + Firestore
 
 ---
 
-## 🔗 Live Demo
+## Live Demo
 
 **GitHub Deployment:**  
 https://medha30042001.github.io/ai-project-evaluation/
@@ -16,7 +16,7 @@ https://timetrackingapp-a6604.web.app/
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 ### **Frontend**
 - HTML5  
@@ -39,23 +39,23 @@ https://timetrackingapp-a6604.web.app/
 
 ---
 
-## ✨ Features
+## Features
 
-### ✔ Google Authentication  
+### => Google Authentication  
 Secure sign-in using Google OAuth.
 
-### ✔ Add, Edit, Delete Activities  
+### => Add, Edit, Delete Activities  
 Log activities with:
 - Title  
 - Category  
 - Duration (minutes)  
 - Notes  
 
-### ✔ Day-wise Data Storage  
+### => Day-wise Data Storage  
 Firestore path:  
 `users/{uid}/days/{date}/activities`
 
-### ✔ Interactive Analytics  
+### => Interactive Analytics  
 - Total minutes & hours  
 - Category-wise breakdown  
 - Activity count  
@@ -67,13 +67,64 @@ Optimized for mobile, tablet, and desktop.
 
 ---
 
-## 🚀 How to Run the Project Locally
+## How to Run the Project Locally
 
-### 1️⃣ Clone the Repository
+### 1. Clone the Repository
 ```bash
 git clone https://github.com/Medha30042001/ai-project-evaluation.git
 cd ai-project-evaluation
+```
+### 2. Clone the Repository
+Inside /scripts/firebase-config.js, paste your Firebase config:
+```bash
+window.__FIREBASE_CONFIG = {
+          apiKey: "...",
+          authDomain: "...",
+          projectId: "...",
+          storageBucket: "...",
+          messagingSenderId: "...",
+          appId: "..."
+        };
+```
+### 3. Open the Project
+  Since this is pure HTML/CSS/JS:
+  Use Live Server
+  OR
+  Open index.html directly in your browser
 
+ ### 4. (Optional) Firebase Hosting Setup
+  firebase login
+  firebase init
+  firebase deploy   
+
+---
+
+## Folder structure
+
+```bash
+ai-project-evaluation
+  │
+  ├── index.html
+  ├── login.html
+  ├── activity.html
+  ├── analytics.html
+  │
+  ├── scripts
+  │   ├── auth.js
+  │   ├── db.js
+  │   ├── analytics.js
+  │   ├── activity.js
+  │   ├── firebase-config.js
+  │   └── firebase-init.js
+  │
+  ├── styles
+  │   └── style.css
+  │
+  ├── dist/
+  ├── .github/
+  ├── firebase.json
+  └── README.md
+```
 
 #############################################################################
 
